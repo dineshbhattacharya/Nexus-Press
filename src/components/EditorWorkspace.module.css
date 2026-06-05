@@ -1,0 +1,337 @@
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* Left panel: Document editor */
+.editorPanel {
+  padding: 40px 60px 100px 60px;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-color);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.backLink:hover {
+  color: var(--text-primary);
+}
+
+.titleInput {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 2.8rem;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.titleInput::placeholder {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.slugRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.slugInput {
+  border: none;
+  background: transparent;
+  border-bottom: 1px dashed var(--border-color);
+  color: var(--text-secondary);
+  font-family: inherit;
+  outline: none;
+  font-size: inherit;
+  padding: 0 4px;
+}
+
+.slugInput:focus {
+  border-bottom-color: var(--accent-orange);
+  color: var(--text-primary);
+}
+
+/* TipTap Editor Styling */
+.tiptapEditor {
+  min-height: 400px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.tiptapEditor p {
+  margin-bottom: 20px;
+}
+
+.tiptapEditor h2 {
+  font-size: 1.6rem;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+.tiptapEditor blockquote {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  border-left: 3px solid var(--accent-orange);
+  padding-left: 16px;
+  margin: 24px 0;
+  color: var(--text-secondary);
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.toolbarBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbarBtn:hover {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.toolbarBtnActive {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* Right panel: Sidebar settings */
+.sidebarPanel {
+  padding: 32px 24px;
+  background: var(--bg-card);
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow-y: auto;
+}
+
+.sectionTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.settingsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.input {
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent-orange);
+}
+
+.select {
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.select:focus {
+  border-color: var(--accent-orange);
+}
+
+.btnSave {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* AI Copilot Sidebar Section */
+.aiSection {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aiTitle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.aiActionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.aiBtn {
+  padding: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.aiBtn:hover {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+.copilotPromptWrapper {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.promptInput {
+  flex-grow: 1;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.promptInput:focus {
+  border-color: var(--accent-orange);
+}
+
+.promptBtn {
+  padding: 8px 12px;
+  font-size: 0.8rem;
+}
+
+.aiResultBox {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-top: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.aiResultText {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.aiResultActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.aiResultBtn {
+  font-size: 0.7rem;
+  padding: 4px 8px;
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+  .editorPanel {
+    padding: 24px 16px 80px 16px;
+  }
+  .sidebarPanel {
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding: 24px 16px;
+  }
+}
