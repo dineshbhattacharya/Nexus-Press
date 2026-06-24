@@ -2,7 +2,11 @@
 
 ## Overview
 
-**Nexus-Press** is a full-stack, multi-publication newsletter and content-sharing platform built with modern web technologies. It empowers individual writers and creators to launch branded publications, manage subscriber tiers, and monetize through a freemium subscription model. Readers can discover newsletters across diverse topics, subscribe to publications, engage through comments and likes, bookmark content, and share microblog-style "notes" within a community feed.
+### About
+
+Nexus-Press is a modular newsletter platform that makes it easy for writers to publish multi-branded publications, offer free and premium content tiers, and build engaged reader communities — all powered by a TypeScript + Next.js stack.
+
+**Nexus-Press** is a full-stack, multi-publication newsletter and content-sharing platform built with modern web technologies. It empowers individual writers and creators to launch branded publicat[...] 
 
 ## Key Features
 
@@ -143,4 +147,4 @@ Each publication ships with 2 posts spanning free and premium tiers, plus engage
 
 ---
 
-**Nexus-Press** is a ready-to-extend platform for independent publishers. The modular component architecture and type-safe Prisma ORM make it straightforward to add features like analytics, payment integrations, or recommendation algorithms.
+**Nexus-Press** is a ready-to-extend platform for independent publishers. The modular component architecture and type-safe Prisma ORM make it straightforward to add features like analytics, payme[...]
